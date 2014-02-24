@@ -22,6 +22,9 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'nifty-generators'
+gem 'omniauth'
+gem 'omniauth-twitter'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -37,3 +40,5 @@ gem 'devise'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test

@@ -1,6 +1,10 @@
 Homepolish::Application.routes.draw do
+  resources :authentications
 
-  get "static_pages/home"
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+
+  root :to => "static_pages#home"
+  match '/auth/:provider/callback' => 'authentications#create'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
