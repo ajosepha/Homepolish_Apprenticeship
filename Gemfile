@@ -25,6 +25,7 @@ gem 'devise'
 gem 'nifty-generators'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'omniauth-instagram'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

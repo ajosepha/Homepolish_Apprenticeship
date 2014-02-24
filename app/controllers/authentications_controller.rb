@@ -5,8 +5,11 @@ class AuthenticationsController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"]
-    current_user.authentications.find_or_create_by_provider_and_uid(auth['provider'], auth['uid'])
-    flash[:notice] = "Authentication successfull"
+    current_user.authentications.find_or_create_by_provider_and_uid_and_token_and_secret(
+      auth['provider'], auth['uid'], 
+      auth["credentials"]["token"], 
+      auth["credentials"]["secret"])
+    flash[:notice] = "#{auth['provider'].to_s.capitalize} Authentication successful"
     redirect_to authentications_url
   end
 
