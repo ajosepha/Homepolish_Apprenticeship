@@ -4,7 +4,6 @@ class InstagramParser
 
   def initialize(user_obj)
     @user_obj = user_obj
-    debugger
     Instagram.configure do |config|
       config.client_id =  "2485542ff77048aeab4f84d5c607f54a"
       config.client_secret = "1fac4c466ac74d66bd7740674d5339b6"

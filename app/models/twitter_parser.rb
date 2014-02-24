@@ -1,13 +1,14 @@
-class Twitter_parser 
+class TwitterParser 
 
-  attr_accessor :client, :info_array
+  attr_accessor :client, :info_array, :user_obj
 
-  def initialize
+  def initialize(user_obj)
+    @user_obj = user_obj
     @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV['TWITTER_KEY']
-      config.consumer_secret     = ENV['TWITTER_SECRET']
-      config.access_token        = ENV['TWITTER_TOKEN']
-      config.access_token_secret = ENV['TWITTER_TOKEN_SECRET']
+      config.consumer_key        = "XCAPDhcDecC718Sj7Yj1A"
+      config.consumer_secret     = "gmF6EpFSj2hyRh30aHWj6rwTOFXswDFqZJ9ZTobO34"
+      config.access_token        = user_obj.authentications.find_by_provider("twitter").token
+      config.access_token_secret = user_obj.authentications.find_by_provider("twitter").secret
     end
     @info_array = []
   end
