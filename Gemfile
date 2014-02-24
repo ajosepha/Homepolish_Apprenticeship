@@ -4,9 +4,9 @@ gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'faraday', "~>0.8.9"
 gem 'sqlite3'
-
+gem 'instagram', :git => "git://github.com/Instagram/instagram-ruby-gem.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,6 +40,6 @@ gem 'omniauth-instagram'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
 
 gem "mocha", :group => :test

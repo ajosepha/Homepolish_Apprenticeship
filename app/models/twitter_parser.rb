@@ -1,4 +1,4 @@
-class Twitter_parser
+class Twitter_parser 
 
   attr_accessor :client, :info_array
 

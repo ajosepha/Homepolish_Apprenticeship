@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/Instagram/instagram-ruby-gem.git
+  revision: 958afde594a8fd73f6a5b678c268d135c25a721d
+  specs:
+    instagram (0.10.0)
+      faraday (>= 0.7, < 0.9)
+      faraday_middleware (~> 0.8)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,7 +40,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.3)
     atomic (1.1.14)
-    bcrypt (3.1.3)
+    bcrypt (3.1.6)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
     builder (3.0.4)
@@ -41,6 +51,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    columnize (0.3.6)
+    debugger (1.6.5)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.1)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.1)
     devise (3.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -49,8 +66,10 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
-    faraday (0.9.0)
-      multipart-post (>= 1.2, < 3)
+    faraday (0.8.9)
+      multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
     hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.9)
@@ -70,7 +89,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.8.4)
     multi_xml (0.5.5)
-    multipart-post (2.0.0)
+    multipart-post (1.2.0)
     nifty-generators (0.4.6)
     oauth (0.4.7)
     oauth2 (0.9.3)
@@ -153,7 +172,10 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  debugger
   devise
+  faraday (~> 0.8.9)
+  instagram!
   jquery-rails
   mocha
   nifty-generators
