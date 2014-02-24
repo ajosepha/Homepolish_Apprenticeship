@@ -1,4 +1,5 @@
 class AuthenticationsController < ApplicationController
+  before_filter :authenticate_user!
   def index
     @authentications = current_user.authentications if current_user
   end
@@ -9,13 +10,13 @@ class AuthenticationsController < ApplicationController
       auth['provider'], auth['uid'], 
       auth["credentials"]["token"], 
       auth["credentials"]["secret"])
-    flash[:notice] = "#{auth['provider'].to_s.capitalize} Authentication successful"
+    flash[:notice] = "#{auth['provider'].to_s.capitalize} authentication successful"
     redirect_to authentications_url
   end
 
   def destroy
     @authentication = current_user.authentications.find(params[:id])
     @authentication.destroy
-    redirect_to authentications_url, :notice => "Successfully destroyed authentication."
+    redirect_to authentications_url, :notice => "Successfully removed authentication."
   end
 end
