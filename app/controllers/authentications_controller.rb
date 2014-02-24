@@ -10,8 +10,16 @@ class AuthenticationsController < ApplicationController
       auth['provider'], auth['uid'], 
       auth["credentials"]["token"], 
       auth["credentials"]["secret"])
+    
+    
+    
+    
+
     flash[:notice] = "#{auth['provider'].to_s.capitalize} authentication successful"
     redirect_to authentications_url
+
+    @a = TwitterDatum.new
+    @a.create_with_twitter(current_user)
   end
 
   def destroy

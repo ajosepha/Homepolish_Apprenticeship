@@ -3,11 +3,9 @@ class StaticPagesController < ApplicationController
   end
 
   def social_media
-  	@user = current_user
-  	@name = @user.username
-  	@a = TwitterData.new
-  	@b = @a.create_with_twitter(@user)
-  	@c = TwitterData.find_by_name("@name")
+    # debugger
+    @user = current_user
+    @twitter_parsed = @user.twitter_data
   end
 
   def create
