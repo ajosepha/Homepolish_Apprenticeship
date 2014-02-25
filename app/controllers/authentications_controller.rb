@@ -19,12 +19,6 @@ class AuthenticationsController < ApplicationController
       @b = InstagramDatum.new
       @b.create_with_instagram(current_user)
     end
-    
-    # @a = TwitterDatum.new
-    # @a.create_with_twitter(current_user)
-    # @b = InstagramDatum.new
-    # @b.create_with_instagram(current_user)
-    @auth =['provider']
     flash[:notice] = "#{auth['provider'].to_s.capitalize} authentication successful"
     redirect_to authentications_url
   end
