@@ -2,10 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.16'
 
+group :development do
+  gem 'sqlite3'
+end
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'faraday', "~>0.8.9"
-gem 'sqlite3'
+
 # gem 'instagram'
 gem 'instagram', :git => "git://github.com/Instagram/instagram-ruby-gem.git"
 gem 'twitter'
@@ -29,7 +32,9 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-instagram'
 
-gem 'rails_12factor', group: :production
+group :production do 
+  gem 'pg'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
