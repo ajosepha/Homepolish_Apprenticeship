@@ -32,6 +32,7 @@ gem 'nifty-generators'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-instagram'
+gem 'activerecord-postgresql-adapter'
 
 group :production do 
   gem 'pg'
