@@ -1,6 +1,6 @@
 <% if @authentications %>
   <% unless @authentications.empty? %>
-    <p><strong>You can sign in to this account using:</strong></p>
+    <p><strong>Please authenticate your accounts using:</strong></p>
     <div class="authentications">
       <% for authentication in @authentications %>
         <div class="authentication">
@@ -13,9 +13,9 @@
       <div class="clear"></div>
     </div>
   <% end %>
-  <p><strong>Add another service to sign in with:</strong></p>
+  <p><strong>Add another authentication to sign in with:</strong></p>
 <% else %>
-  <p><strong>Sign in through one of these services:</strong></p>
+  <p><strong>Authenticate through one of these services:</strong></p>
 <% end %>
 
 <a href="/auth/twitter" class="auth_provider">
