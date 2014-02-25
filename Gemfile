@@ -29,6 +29,8 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-instagram'
 
+gem 'rails_12factor', group: :production
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -45,3 +47,5 @@ gem 'omniauth-instagram'
 gem 'debugger'
 
 gem "mocha", :group => :test
+
+ruby '2.0.0'
