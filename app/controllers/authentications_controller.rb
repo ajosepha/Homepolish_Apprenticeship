@@ -11,11 +11,18 @@ class AuthenticationsController < ApplicationController
       auth["credentials"]["token"],
       auth["credentials"]["secret"])
 
+    if auth['provider'].downcase == "twitter"
+      @a = TwitterDatum.new
+      @a.create_with_twitter(current_user)
+    else
+      @b = InstagramDatum.new
+      @b.create_with_instagram(current_user)
+    end
     
-    @a = TwitterDatum.new
-    @a.create_with_twitter(current_user)
-    @b = InstagramDatum.new
-    @b.create_with_instagram(current_user)
+    # @a = TwitterDatum.new
+    # @a.create_with_twitter(current_user)
+    # @b = InstagramDatum.new
+    # @b.create_with_instagram(current_user)
 
     flash[:notice] = "#{auth['provider'].to_s.capitalize} authentication successful"
     redirect_to authentications_url
