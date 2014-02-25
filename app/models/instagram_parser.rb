@@ -23,7 +23,16 @@ class InstagramParser
     new_array
   end
 
-  
+  def target_data(id)
+      user = Instagram.user(id)
+      @info_array << {
+        :instagram_id => user["id"],
+        :username => user["username"],
+        :bio => user["bio"],
+        :name => user["full_name"],
+        :followers_count => user["counts"]["followed_by"]
+      }
+  end
 
   def sort_followers(array, hash_key)
     array.sort_by {|hash| hash[hash_key]}.reverse
@@ -39,16 +48,4 @@ class InstagramParser
       end
     sort_followers(info_array, :followers_count)
   end
-
-  def target_data(id)
-      user = Instagram.user(id)
-      @info_array << {
-        :id => user["id"],
-        :username => user["username"],
-        :bio => user["bio"],
-        :name => user["full_name"],
-        :followers_count => user["counts"]["followed_by"]
-      }
-  end
-
 end

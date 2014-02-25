@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :authentications
   has_many :twitter_data
+  has_many :instagram_data
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

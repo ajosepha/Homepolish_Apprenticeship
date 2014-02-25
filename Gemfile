@@ -6,6 +6,7 @@ gem 'rails', '3.2.16'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'faraday', "~>0.8.9"
 gem 'sqlite3'
+# gem 'instagram'
 gem 'instagram', :git => "git://github.com/Instagram/instagram-ruby-gem.git"
 gem 'twitter'
 gem 'figaro'

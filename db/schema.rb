@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140224211855) do
+ActiveRecord::Schema.define(:version => 20140225012546) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(:version => 20140224211855) do
     t.datetime "updated_at", :null => false
     t.string   "token"
     t.string   "secret"
+  end
+
+  create_table "instagram_data", :force => true do |t|
+    t.string   "name"
+    t.string   "username"
+    t.string   "bio"
+    t.integer  "followers_count"
+    t.integer  "user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "instagram_id"
   end
 
   create_table "twitter_data", :force => true do |t|

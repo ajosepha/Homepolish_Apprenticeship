@@ -8,18 +8,17 @@ class AuthenticationsController < ApplicationController
     auth = request.env["omniauth.auth"]
     current_user.authentications.find_or_create_by_provider_and_uid_and_token_and_secret(
       auth['provider'], auth['uid'], 
-      auth["credentials"]["token"], 
+      auth["credentials"]["token"],
       auth["credentials"]["secret"])
+
     
-    
-    
-    
+    @a = TwitterDatum.new
+    @a.create_with_twitter(current_user)
+    @b = InstagramDatum.new
+    @b.create_with_instagram(current_user)
 
     flash[:notice] = "#{auth['provider'].to_s.capitalize} authentication successful"
     redirect_to authentications_url
-
-    @a = TwitterDatum.new
-    @a.create_with_twitter(current_user)
   end
 
   def destroy
