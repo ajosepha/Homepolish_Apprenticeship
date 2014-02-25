@@ -27,7 +27,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'devise'
+
 gem 'nifty-generators'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -36,6 +36,7 @@ gem 'omniauth-instagram'
 group :production do 
   gem 'pg'
   gem 'rails_12factor'
+  gem 'devise'
 end
 
 # To use ActiveModel has_secure_password
