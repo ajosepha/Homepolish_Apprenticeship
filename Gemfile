@@ -37,8 +37,9 @@ gem 'activerecord-postgresql-adapter'
 group :production do 
   gem 'pg'
   gem 'rails_12factor'
-  gem 'devise'
 end
+
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
