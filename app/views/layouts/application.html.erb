@@ -13,7 +13,7 @@
         Logged in as <strong><%= current_user.email %></strong>.
         <%= link_to 'Authentications', authentications_path %> |
         <%= link_to 'Edit profile', edit_user_registration_path %> |
-        <%= link_to 'Top Followers', social_media_path %> |
+        <%= link_to 'Top followers', social_media_path %> |
         <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to 'Sign up', new_user_registration_path %> |

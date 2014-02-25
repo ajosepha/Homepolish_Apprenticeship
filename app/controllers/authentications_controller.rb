@@ -6,10 +6,11 @@ class AuthenticationsController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"]
-    current_user.authentications.find_or_create_by_provider_and_uid_and_token_and_secret(
+    current_user.authentications.find_or_create_by_provider_and_uid_and_token_and_secret_and_nickname(
       auth['provider'], auth['uid'], 
       auth["credentials"]["token"],
-      auth["credentials"]["secret"])
+      auth["credentials"]["secret"],
+      auth["info"]["nickname"])
 
     if auth['provider'].downcase == "twitter"
       @a = TwitterDatum.new
