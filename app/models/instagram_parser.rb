@@ -1,3 +1,4 @@
+
 class InstagramParser
   
   attr_accessor :data, :info_array, :user_obj
@@ -39,7 +40,7 @@ class InstagramParser
   end
 
   def parse_and_sort
-      find_id.each do |id|
+      find_id.each do |id|a 
         begin
         target_data(id)
         rescue 
@@ -48,4 +49,6 @@ class InstagramParser
       end
     sort_followers(info_array, :followers_count)
   end
+
+
 end
