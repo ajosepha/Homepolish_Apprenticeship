@@ -1,0 +1,8 @@
+<% @instagram_parsed.length.times do |i| %>
+  <li><a href = "http://instagram.com/<%=@instagram_parsed[i][:username] %>" target = "blank"> <%=@instagram_parsed[i][:username].capitalize %></a>
+    <ul>
+      <li> Bio: <%= @instagram_parsed[i][:bio] %></li>
+      <li> Followers: <%=@instagram_parsed[i][:followers_count] %> </li>
+      <li> Location: <%=@instagram_parsed[i][:location] %> </li>
+    </ul>
+<% end %>

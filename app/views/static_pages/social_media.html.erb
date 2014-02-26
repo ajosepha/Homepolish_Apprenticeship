@@ -1,26 +1,38 @@
 <div id="main-wrapper">
   <div class="left-box instagram">
-    <h2> These are your top 10 Instagram followers </h2>
-    <ol><% 10.times do |i| %>
-      <li><a href = "http://instagram.com/<%=@instagram_parsed[i][:username] %>" target = "blank"> <%=@instagram_parsed[i][:username].capitalize %></a>
-        <ul>
-          <li> Bio: <%= @instagram_parsed[i][:bio] %></li>
-          <li> Followers: <%=@instagram_parsed[i][:followers_count] %> </li>
-        </ul>
+    <h2> These are your top Instagram followers </h2>
+    <%= paginate @instagram_parsed %>
+    <ol>
+      <% if @instagram_parsed.empty? %>
+        <%= "Instagram has not been authorized" %>
+      <% else %>
+        <% if @instagram_parsed.length < 200 %>
+          <%= render "inst_par"%>
+        <% else %>
+        <%= render "inst_par2"%>
       <% end %>
+    <% end %>
     </ol>
   </div>
 
 
   <div class="right-box twitter">
-    <h2> These are your top 10 Twitter followers </h2>
-    <ol><% 10.times do |i| %>
-      <li><a href = "http://twitter.com/<%=@twitter_parsed[i][:username] %>" target = "blank"> <%=@twitter_parsed[i][:username].capitalize %></a>
-        <ul>
-          <li> Bio: <%= @twitter_parsed[i][:bio] %></li>
-          <li> Followers: <%=@twitter_parsed[i][:followers_count] %> </li>
-          <li> Location: <%=@twitter_parsed[i][:location] %> </li>
-        </ul>
+    <h2> These are your top Twitter followers </h2>
+    <%= paginate @twitter_parsed %>
+    <ol>
+      <% if @twitter_parsed.empty? %>
+        <%= "Twitter has not been authorized" %>
+      <% else %>
+        <% if @twitter_parsed.length < 200 %>
+
+           <%= render "tweet_par" %>
+        
+        <% else %>
+        
+            <%= render "tweet_par2"%>
+          
+        
+        <% end %>
       <% end %>
     </ol>
   </div>

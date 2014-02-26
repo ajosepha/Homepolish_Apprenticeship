@@ -1,6 +1,7 @@
 class InstagramDatum < ActiveRecord::Base
   belongs_to :user
   attr_accessible :name, :username, :bio, :followers_count, :instagram_id, :location
+  validates_uniqueness_of :username, scope: :user_id
 
   def create_with_instagram(current_user)
     instagram_parser = InstagramParser.new(current_user)

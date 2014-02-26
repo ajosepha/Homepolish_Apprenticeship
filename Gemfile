@@ -34,6 +34,8 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-instagram'
 gem 'activerecord-postgresql-adapter'
+gem 'debugger'
+gem 'kaminari'
 
 group :production do 
   gem 'pg'
