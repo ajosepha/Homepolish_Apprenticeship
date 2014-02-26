@@ -3,12 +3,12 @@ class StaticPagesController < ApplicationController
   end
 
   def social_media
-    # debugger
     @twitteruser = current_user
     @twitter_parsed = @twitteruser.twitter_data
     @instauser = current_user
     @instagram_parsed = @instauser.instagram_data
-
+    #debugger
+    #puts 'hi'
   end
 
   def create
