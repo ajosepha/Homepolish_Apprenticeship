@@ -1,0 +1,8 @@
+<% 200.times do |i| %>
+  <li><a href = "http://twitter.com/<%=@twitter_parsed[i][:username] %>" target = "blank"> <%=@twitter_parsed[i][:username].capitalize %></a>
+    <ul>
+      <li> Bio: <%= @twitter_parsed[i][:bio] %></li>
+      <li> Followers: <%=@twitter_parsed[i][:followers_count] %> </li>
+      <li> Location: <%=@twitter_parsed[i][:location] %> </li>
+    </ul>
+<% end %>

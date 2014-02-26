@@ -4,9 +4,10 @@ class StaticPagesController < ApplicationController
 
   def social_media
     @twitteruser = current_user
-    @twitter_parsed = @twitteruser.twitter_data
+    @twitter_parsed = @twitteruser.twitter_data.page(params[:page]).per(10)
+    @loop = @twitter_parsed.length 
     @instauser = current_user
-    @instagram_parsed = @instauser.instagram_data
+    @instagram_parsed = @instauser.instagram_data.page(params[:page]).per(10)
     #debugger
     #puts 'hi'
   end
