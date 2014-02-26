@@ -13,22 +13,12 @@
   def find_photo_location(id)
     results = Instagram.user_recent_media(id)
     locations = []
-    photos = results.first
-    #this returns something strange
-
-      locations << {:latitude => photos.location[:latitude], :longitude => photos.location[:latitude]}
-
+    # photos = results.first
+    # #this returns something strange
+    results.each do |element|
+      locations << {:latitude => element.location[:latitude], :longitude => element.location[:latitude]}
+    end
   end
-  #    photo1.location
-  #     #find the lat and long of a photo
-  #   #find all locations of a users most recent 20 photos
-  #     locations = []
-  #     results.each do |photo|
-  #         locations << photo.location
-  #     end
-  #   locations
-  # end
 
-  #end
 
 #ashley 11212585
