@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(:version => 20140226225035) do
     t.string   "location"
   end
 
+  create_table "locations", :force => true do |t|
+    t.float   "latitude"
+    t.float   "longitude"
+    t.integer "zipcode"
+    t.string  "city"
+    t.string  "country"
+    t.string  "address"
+  end
+
   create_table "twitter_data", :force => true do |t|
     t.string   "name"
     t.string   "username"
