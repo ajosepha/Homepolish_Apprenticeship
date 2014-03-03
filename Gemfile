@@ -13,6 +13,7 @@ gem 'faraday', "~>0.8.9"
 gem 'instagram', :git => "git://github.com/Instagram/instagram-ruby-gem.git"
 gem 'twitter'
 gem 'figaro'
+gem 'geocoder'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
