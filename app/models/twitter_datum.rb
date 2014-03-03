@@ -4,7 +4,6 @@ class TwitterDatum < ActiveRecord::Base
   validates_uniqueness_of :username, scope: :user_id
 
   def create_with_twitter(current_user)
-    debugger
     twitter_parser = TwitterParser.new(current_user)
     data = twitter_parser.parse_and_sort
     data.each do |datum|
