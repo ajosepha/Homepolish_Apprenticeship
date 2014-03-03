@@ -12,10 +12,14 @@
  *= require_tree .
  */
 
+.navbar-nav {
+  color: green;
+}
+
  .authentications {
   margin-bottom: 30px;
 }
-
+ 
 .authentication {
   width: 130px;
   float: left;
