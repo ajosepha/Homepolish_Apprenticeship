@@ -1,3 +1,47 @@
+@import "/bootstrap/css/bootstrap.min.css";
 
+body {
+  background: url(./homepage.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
 
+// .homepage {
+//   margin: 0 auto;
+//   color: #08b89f; 
+//   background: rgba(0, 0, 0, .8);
+//   width: 500px;
+//   padding: 10px;
+//   text-align: center;
+//   position: relative;
+// }
 
+.jumbotron {
+  margin-top: 18%;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  color: #08b89f;
+}
+
+.signup li {
+  display: inline-block;
+}
+
+btn btn-primary btn-lg{
+  background-color: grey;
+}
+
+.navbar {
+  background-color: #08b89f;
+}
+
+.navbar-default .navbar-brand, {
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: white;
+}
+
+.navbar-default p.navbar-text{
+  color: white;
+}
