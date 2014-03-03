@@ -13,10 +13,15 @@
  */
 
 
+<<<<<<< HEAD:app/assets/stylesheets/application.css
 .authentications {
   margin-bottom: 30px;
 }
  
+=======
+
+
+>>>>>>> 64884ab2d7565790d651c8f23af2d1f165c906d9:app/assets/stylesheets/application.css.scss
 .authentication {
   width: 200px;
   float: left;
