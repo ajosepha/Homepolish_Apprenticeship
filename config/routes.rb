@@ -6,7 +6,7 @@ Homepolish::Application.routes.draw do
   root :to => "static_pages#home"
   match '/auth/:provider/callback' => 'authentications#create'
 
-  match '/social_media' => 'static_pages#social_media'
+  match '/top_followers' => 'static_pages#top_followers'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

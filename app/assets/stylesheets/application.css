@@ -12,11 +12,12 @@
  *= require_tree .
  */
 
-
-
-
+.authentications {
+  margin-bottom: 30px;
+}
+ 
 .authentication {
-  width: 130px;
+  width: 200px;
   float: left;
   background-color: #EEE;
   border: solid 1px #999;

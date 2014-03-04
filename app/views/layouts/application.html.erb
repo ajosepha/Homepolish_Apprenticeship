@@ -6,39 +6,36 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
  
 
 </head>
 <body>
   <div id="container">
     <% if user_signed_in? %>
-    <div id="user_nav" class="navbar navbar-default">
+    <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <%=link_to 'Homepolish', root_path, :class => "navbar-brand"%>
-      
-
-
         <ul class="nav navbar-nav">
-         
           <li><%= link_to 'Authentications', authentications_path %></li>
           <li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
-          <li><%= link_to 'Top followers', social_media_path %> </li>
+          <li><%= link_to 'Top followers', top_followers_path %> </li>
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
         </ul>
 
-         <ul class="nav navbar-nav navbar-right"> 
-          <li><a>Logged in as <strong><%= current_user.email %></strong></a></li>
+        <ul class="nav navbar-nav navbar-right">
+          <li><p class="navbar-text">Logged in as <strong><%=current_user.email%></strong></p></li>
         </ul>
-      <% else %>
-        <%= link_to 'Sign up', new_user_registration_path %> |
-        <%= link_to 'Login', new_user_session_path %>
-        
-    <% end %>
+        <% end %>
       </div>
-    </div>
+    </nav>
+    
+    
+    
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>
-      <% end %>
+    <% end %>
+     
     <%= yield %>
   </div>
 

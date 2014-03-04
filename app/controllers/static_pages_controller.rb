@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def social_media
+  def top_followers
     @twitteruser = current_user
     @twitter_parsed = @twitteruser.twitter_data.page(params[:page]).per(10)
     @loop = @twitter_parsed.length 
