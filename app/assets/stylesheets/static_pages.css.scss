@@ -2,11 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+<<<<<<< HEAD
 .main-wrapper {
   border: 1px solid black;
   background-color: rgba(0,0,0,.4);
   overflow: auto;
 }
+=======
+>>>>>>> 25d149cc11f0804367ca62eafc2bf7334fa0fa6e
 
 .left-box, .right-box {
     float: left;
@@ -17,7 +20,11 @@
     border-left:1px solid #999;
 }
 .box h2 {
+<<<<<<< HEAD
     // background-color: #D8E9E6;
+=======
+    background-color: #D8E9E6;
+>>>>>>> 25d149cc11f0804367ca62eafc2bf7334fa0fa6e
     border-top: thin solid #97b4e0;
     border-bottom: thin solid #97b4e0;
 }
