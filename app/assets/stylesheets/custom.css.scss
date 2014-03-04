@@ -24,15 +24,21 @@ body {
   margin-top: 18%;
   text-align: center;
   background: rgba(0, 0, 0, .5);
-  color: #08b89f;
+  color: white;
 }
 
 .signup li {
   display: inline-block;
+  text-align: center;
+  position: relative;
+  right: 2%;
+  margin: 0 5px 0 5px;
 }
 
-btn btn-primary btn-lg{
-  background-color: grey;
+.signup .btn {
+  background: #08b89f;
+  border: none;
+  color: white;
 }
 
 .navbar {
@@ -49,4 +55,119 @@ btn btn-primary btn-lg{
 
 .navbar-default p.navbar-text{
   color: white;
+}
+
+
+/* Forms */
+
+h2.titleform {
+  margin-top: 100px;
+}
+
+.centerform {
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  width: 300px;
+  margin: 0 auto;
+  color: white;
+  padding: 15px 10px 10px 10px;
+
+}
+
+div.lastdiv{
+  margin-top: 10px;
+  color: white;
+}
+
+#signup.btn {
+ background: #08b89f;
+ margin-bottom: 10px;
+ color: white;
+
+}
+
+.centerform a {
+  color: white;
+}
+
+input, select, textarea{
+    color: #08b89f;
+}
+
+textarea:focus, input:focus {
+    color: #000;
+}
+
+
+/* Authentication page */
+.authentication-wrapper {
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  color: white;
+  padding: 15px 10px 10px 10px;
+
+}
+
+.authentications {
+  margin-bottom: 30px;
+}
+ 
+
+.authentication {
+  width: 200px;
+  float: left;
+  background-color: #EEE;
+  border: solid 1px #999;
+  padding: 5px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.authentication .remove {
+  text-decoration: none;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #333;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+
+.authentication .remove:hover {
+  color: #CCC;
+  background-color: #777;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+.authentication img {
+  float: left;
+  margin-right: 10px;
+}
+
+.authentication .provider {
+  font-weight: bold;
+  color: #08b89f;
+}
+
+.authentication .uid {
+  color: #666;
+  font-size: 11px;
+}
+
+.auth_provider img {
+  display: block;
+}
+
+.auth_provider {
+  float: left;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }

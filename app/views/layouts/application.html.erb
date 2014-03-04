@@ -15,8 +15,8 @@
     <% if user_signed_in? %>
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
-        <%=link_to 'Homepolish', root_path, :class => "navbar-brand"%>
         <ul class="nav navbar-nav">
+          <li class="navbar-brand">Homepolish</li>
           <li><%= link_to 'Authentications', authentications_path %></li>
           <li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
           <li><%= link_to 'Top followers', top_followers_path %> </li>
